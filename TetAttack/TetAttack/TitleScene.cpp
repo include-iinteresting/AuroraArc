@@ -1,11 +1,11 @@
 #include "stdafx.h"
-#include "Title.h"
+#include "TitleScene.h"
 #include <d2d1.h>
 
 /**
 * @brief	コンストラクタ
 */
-CTitle::CTitle()
+CTitleScene::CTitleScene()
 {
 }
 
@@ -13,7 +13,7 @@ CTitle::CTitle()
 /**
 * @brief	デストラクタ
 */
-CTitle::~CTitle()
+CTitleScene::~CTitleScene()
 {
 }
 
@@ -22,7 +22,7 @@ CTitle::~CTitle()
 * @brief	更新
 * @return	GameSceneResultCode		シーンの状態
 */
-GameSceneResultCode CTitle::move()
+GameSceneResultCode CTitleScene::move()
 {
 	return GameSceneResultCode::GAMESCENE_DEFAULT;
 }
@@ -30,7 +30,7 @@ GameSceneResultCode CTitle::move()
 /**
 * @brief	pRenderTarget	レンダーターゲット
 */
-void CTitle::draw(ID2D1RenderTarget * pRenderTarget)
+void CTitleScene::draw(ID2D1RenderTarget * pRenderTarget)
 {
 	ID2D1SolidColorBrush *pBrush = NULL;
 

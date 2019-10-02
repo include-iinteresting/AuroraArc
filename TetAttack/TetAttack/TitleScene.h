@@ -1,11 +1,13 @@
 #pragma once
 #include "IGameScene.h"
-class CTitle :
+
+
+class CTitleScene :
 	public IGameScene
 {
 public:
-	CTitle();
-	virtual ~CTitle();
+	CTitleScene();
+	virtual ~CTitleSceme();
 	virtual	GameSceneResultCode	move()	override;
 	virtual	void	draw(ID2D1RenderTarget *pRenderTarget)	override;
 };
