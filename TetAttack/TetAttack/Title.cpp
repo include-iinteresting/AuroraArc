@@ -27,14 +27,12 @@ GameSceneResultCode CTitle::move()
 	return GameSceneResultCode::GAMESCENE_DEFAULT;
 }
 
-
 /**
 * @brief	pRenderTarget	レンダーターゲット
 */
-void CTitle::draw(ID2D1RenderTarget * pRenderTarget)w
+void CTitle::draw(ID2D1RenderTarget * pRenderTarget)
 {
 	ID2D1SolidColorBrush *pBrush = NULL;
-
 
 	pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Yellow), &pBrush);
 
