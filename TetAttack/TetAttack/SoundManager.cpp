@@ -78,6 +78,8 @@ private:
 	void	StreamPlayCommand(unsigned int numSound, DWORD dwPriority, DWORD dwFlag);
 	void	StreamStopCommand(unsigned int numSound);
 	void	StreamDoneCommand(unsigned int numSound);
+	void	StreamSetVolume(unsigned int numSound, LONG lVolume);
+	LONG	StreamGetVolume(unsigned int numSound);
 
 	//	StreamThread
 	void	Lock();
@@ -426,6 +428,47 @@ void SoundManagerImpl::StreamDoneCommand(unsigned int numSound)
 
 
 /**
+* @brief	ストリーミングサウンドのボリュームの設定
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @param	[in]	lVolume		設定する音量の値
+*/
+void SoundManagerImpl::StreamSetVolume(unsigned int numSound, LONG lVolume)
+{
+	Lock();
+	if (numSound < m_pStreamSounds.size())
+	{
+		std::list<IStreamingSound*>::iterator it = m_pStreamSounds.begin();
+		for (unsigned int i = 0; i < numSound; ++i)
+		{
+			++it;
+		}
+		(*it)->SetVolume(lVolume);
+	}
+	Unlock();
+}
+
+
+/**
+* @brief	ストリーミングサウンドのボリュームの取得
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @return	指定したストリーミングサウンドオブジェクトの音量の取得
+*/
+LONG SoundManagerImpl::StreamGetVolume(unsigned int numSound)
+{
+	if (numSound < m_pStreamSounds.size())
+	{
+		std::list<IStreamingSound*>::iterator it = m_pStreamSounds.begin();
+		for (unsigned int i = 0; i < numSound; ++i)
+		{
+			++it;
+		}
+		return (*it)->GetVolume();
+	}
+	return 0;
+}
+
+
+/**
 * @brief	ロック(排他制御)
 */
 void SoundManagerImpl::Lock()
@@ -636,6 +679,32 @@ void CSoundManager::StreamDone(unsigned int numSound)
 	SoundManagerImpl *pObj = SoundManagerImpl::GetInstance();
 
 	pObj->StreamDoneCommand(numSound);
+}
+
+
+/**
+* @brief	指定したストリーミングサウンドの音量を設定する
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @param	[in]	lVolume		設定する音量の値
+*/
+void CSoundManager::StreamSetVolume(unsigned int numSound, LONG lVolume)
+{
+	SoundManagerImpl *pObj = SoundManagerImpl::GetInstance();
+
+	pObj->StreamSetVolume(numSound, lVolume);
+}
+
+
+/**
+* @brief	指定したストリーミングサウンドオブジェクトの音量を取得する
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @return	指定したストリーミングサウンドオブジェクトの音量
+*/
+LONG CSoundManager::StreamGetVolume(unsigned int numSound)
+{
+	SoundManagerImpl *pObj = SoundManagerImpl::GetInstance();
+
+	return pObj->StreamGetVolume(numSound);
 }
 
 

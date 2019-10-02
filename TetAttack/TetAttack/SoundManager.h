@@ -18,6 +18,8 @@ public:
 	static	void	StreamPlay(unsigned int numSound, DWORD dwPriority, DWORD dwFlag);
 	static	void	StreamStop(unsigned int numSound);
 	static	void	StreamDone(unsigned int numSound);
+	static	void	StreamSetVolume(unsigned int numSound, LONG lVolume);
+	static	LONG	StreamGetVolume(unsigned int numSound);
 
 	//!<	OneshotSound
 	static	void	LoadOneshotSound(const char* pFilename);

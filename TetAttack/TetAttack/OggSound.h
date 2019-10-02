@@ -20,6 +20,8 @@ public:
 	void	Stop()	override;
 	void	Done()	override;
 	void	SetLoopFlag(bool bFlag)	override;
+	void	SetVolume(LONG lVolume)	override;
+	LONG	GetVolume()	override;
 private:
 	void			CreateSecondaryBuffer();
 	unsigned int	GetPcmBufferFromOgg(OggVorbis_File *ovf, char* buffer, int bufferSize, bool isLoop, bool* isEnd = 0);
