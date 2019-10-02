@@ -23,7 +23,7 @@
     <ProjectGuid>{65328BEC-2739-4374-8F58-E1FE58E03523}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TetAttack</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -90,12 +90,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\include;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Ogg\oggvorbis\include;Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\Win32\Debug;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>Ogg\oggvorbis\Win32\Debug;Ogg\ogglib\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
