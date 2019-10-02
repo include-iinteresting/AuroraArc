@@ -78,6 +78,8 @@ private:
 	void	StreamPlayCommand(unsigned int numSound, DWORD dwPriority, DWORD dwFlag);
 	void	StreamStopCommand(unsigned int numSound);
 	void	StreamDoneCommand(unsigned int numSound);
+	void	StreamSetVolume(unsigned int numSound, LONG lVolume);
+	LONG	StreamGetVolume(unsigned int numSound);
 
 	//	StreamThread
 	void	Lock();
@@ -422,6 +424,47 @@ void SoundManagerImpl::StreamStopCommand(unsigned int numSound)
 void SoundManagerImpl::StreamDoneCommand(unsigned int numSound)
 {
 	EnQueue(numSound, SOUND_DONE, 0, 0);
+}
+
+
+/**
+* @brief	ストリーミングサウンドのボリュームの設定
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @param	[in]	lVolume		設定する音量の値
+*/
+void SoundManagerImpl::StreamSetVolume(unsigned int numSound, LONG lVolume)
+{
+	Lock();
+	if (numSound < m_pStreamSounds.size())
+	{
+		std::list<IStreamingSound*>::iterator it = m_pStreamSounds.begin();
+		for (unsigned int i = 0; i < numSound; ++i)
+		{
+			++it;
+		}
+		//(*it)->SetVolume(lVolume);
+	}
+	Unlock();
+}
+
+
+/**
+* @brief	ストリーミングサウンドのボリュームの取得
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @return	指定したストリーミングサウンドオブジェクトの音量の取得
+*/
+LONG SoundManagerImpl::StreamGetVolume(unsigned int numSound)
+{
+	if (numSound < m_pStreamSounds.size())
+	{
+		std::list<IStreamingSound*>::iterator it = m_pStreamSounds.begin();
+		for (unsigned int i = 0; i < numSound; ++i)
+		{
+			++it;
+		}
+		//return (*it)->GetVolume();
+	}
+	return 0;
 }
 
 
