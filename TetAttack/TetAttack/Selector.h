@@ -11,16 +11,7 @@ enum GamePhase {
 	GAMEPHASE_CLEAR = 0x120
 };
 
-//
-//  Scene の終わり方定数
-//  IGameScene::move() が返す値
-//
-enum GameSceneResultCode {
-	GAMESCENE_DEFAULT = 0,
-	GAMESCENE_END_OK = 1,
-	GAMESCENE_END_TIMEOUT = 2,
-	GAMESCENE_END_FAILURE = 3,
-};
+
 
 class    IGameScene;    //  シーン管理クラス
 struct   ID2D1RenderTarget;

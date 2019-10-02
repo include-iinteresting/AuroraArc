@@ -3,6 +3,20 @@
 //
 #ifndef __IGAMESCENE_H__
 #define __IGAMESCENE_H__
+
+//
+//  Scene ‚ÌI‚í‚è•û’è”
+//  IGameScene::move() ‚ª•Ô‚·’l
+//
+enum GameSceneResultCode {
+	GAMESCENE_DEFAULT = 0,
+	GAMESCENE_END_OK = 1,
+	GAMESCENE_END_TIMEOUT = 2,
+	GAMESCENE_END_FAILURE = 3,
+};
+
+struct ID2D1RenderTarget;
+
 class IGameScene
 {
 public:
