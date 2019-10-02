@@ -442,7 +442,7 @@ void SoundManagerImpl::StreamSetVolume(unsigned int numSound, LONG lVolume)
 		{
 			++it;
 		}
-		//(*it)->SetVolume(lVolume);
+		(*it)->SetVolume(lVolume);
 	}
 	Unlock();
 }
@@ -462,7 +462,7 @@ LONG SoundManagerImpl::StreamGetVolume(unsigned int numSound)
 		{
 			++it;
 		}
-		//return (*it)->GetVolume();
+		return (*it)->GetVolume();
 	}
 	return 0;
 }

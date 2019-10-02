@@ -130,6 +130,32 @@ void COggSound::SetLoopFlag(bool bFlag)
 }
 
 
+/**
+* @brief	音量の設定
+* @param	[in]	lVolume		設定する音量の値
+*/
+void COggSound::SetVolume(LONG lVolume)
+{
+	if (m_pSecondary)
+		m_pSecondary->SetVolume(lVolume);
+}
+
+
+/**
+* @brief	音量の取得
+* @return	音量
+*/
+LONG COggSound::GetVolume()
+{
+	LONG lVolume = 0;
+
+	if (m_pSecondary)
+		m_pSecondary->GetVolume(&lVolume);
+
+	return lVolume;
+}
+
+
 
 /**
 * @brief	セカンダリーバッファの作成

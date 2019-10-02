@@ -21,6 +21,8 @@ public:
 	virtual	void	Stop()	override;
 	virtual	void	Done()	override;
 	virtual	void	SetLoopFlag(bool bFlag)	override;
+	virtual	void	SetVolume(LONG lVolume) override;
+	virtual	LONG	GetVolume()	override;
 private:
 	void			CreateSecondaryBuffer(WAVEFORMATEX wfx);
 	void			DecodePrepare();

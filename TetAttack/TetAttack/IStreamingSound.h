@@ -16,5 +16,7 @@ public:
 	virtual	void	Stop() = 0;
 	virtual void	Done() = 0;
 	virtual	void	SetLoopFlag(bool bFlag) = 0;
+	virtual	void	SetVolume(LONG lVolume) = 0;
+	virtual	LONG	GetVolume() = 0;
 };
 

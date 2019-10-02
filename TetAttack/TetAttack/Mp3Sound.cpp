@@ -143,6 +143,31 @@ void CMp3Sound::SetLoopFlag(bool bFlag)
 
 
 /**
+* @brief	音量の設定
+* @param	[in]	lVolume		設定する音量
+*/
+void CMp3Sound::SetVolume(LONG lVolume)
+{
+	if (m_pSecondary)
+		m_pSecondary->SetVolume(lVolume);
+}
+
+
+/**
+* @brief	音量の取得
+*/
+LONG CMp3Sound::GetVolume()
+{
+	LONG lVolume = 0;
+
+	if (m_pSecondary)
+		m_pSecondary->GetVolume(&lVolume);
+	
+	return lVolume;
+}
+
+
+/**
 * @brief	セカンダリバッファの生成
 */
 void CMp3Sound::CreateSecondaryBuffer(WAVEFORMATEX wfx)
