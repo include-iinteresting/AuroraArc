@@ -1,5 +1,7 @@
 #include "StdAfx.h"
 #include <d2d1.h>
+#include <tchar.h>
+#include <dwrite.h>
 #include "Selector.h"
 #include "TetrisScene.h"
 #include "Piece.h"
@@ -76,13 +78,50 @@ void    CTetrisScene::reset() {
 	m_iTime = 0;
 
 	m_bGameOver = false;
+
+
+	//  キー操作関連の初期化
+	m_bEnter2 = true;
+	m_bDown2 = true;
+	m_iLeftWait = 0;
+	m_iRightWait = 0;
+
+	//  状態の初期化
+	m_eTetrisPhase = TETRISPHASE_INIT;
 }
 
 //  アニメーション処理
 GameSceneResultCode    CTetrisScene::move() {
-	m_iTime++;
-	doPiece();
+	
 
+	switch (m_eTetrisPhase) {
+	case    TETRISPHASE_INIT:
+		m_eTetrisPhase = TETRISPHASE_GAME;
+	case    TETRISPHASE_GAME:  //  ブロックが定着するまで落下させる
+		m_iTime++;
+		if (!doPiece()) {
+			m_eTetrisPhase = TETRISPHASE_WAIT;
+			m_iPhaseWait = 0;
+			if (m_bGameOver) {
+				m_eTetrisPhase = TETRISPHASE_GAMEOVER;
+			}
+		}
+		break;
+	case    TETRISPHASE_WAIT:  //  一定時間待ったあと、ブロックを消す
+		m_iPhaseWait++;
+		if (m_iPhaseWait > 30) {
+			m_iPhaseWait = 0;
+			m_eTetrisPhase = TETRISPHASE_GAME;
+			scanField();
+		}
+	case    TETRISPHASE_GAMEOVER:
+		m_iPhaseWait++;
+		if (m_iPhaseWait > 120) {
+			m_iPhaseWait = 0;
+			reset();
+			m_eTetrisPhase = TETRISPHASE_INIT;
+		}
+	}
 	return    GAMESCENE_DEFAULT;
 }
 
@@ -91,6 +130,46 @@ BOOL    CTetrisScene::doPiece() {
 	if (m_pPiece == NULL) {
 		return    false;
 	}
+
+
+	//  キー操作でピースを動かす
+	if (GetAsyncKeyState(VK_RETURN)) {
+		if (!m_bEnter2)
+			m_pPiece->rotate();
+		m_bEnter2 = true;
+	}
+	else {
+		m_bEnter2 = false;
+	}
+	if (GetAsyncKeyState(VK_LEFT)) {
+		if (0 >= --m_iLeftWait) {
+			m_pPiece->moveHorizontal(-1);
+			m_iLeftWait = 12;
+		}
+
+	}
+	else {
+		m_iLeftWait = 1;
+	}
+	if (GetAsyncKeyState(VK_RIGHT)) {
+		if (0 >= --m_iRightWait) {
+			m_pPiece->moveHorizontal(+1);
+			m_iRightWait = 12;
+		}
+	}
+	else {
+		m_iRightWait = 1;
+	}
+	if (GetAsyncKeyState(VK_DOWN)) {
+		if (!m_bDown2)
+			m_iWait = 6;
+		m_bDown2 = true;
+	}
+	else {
+		m_iWait = 30;
+		m_bDown2 = false;
+	}
+
 	if (m_iTime > m_iWait) {
 		m_iTime = 0;
 		return    m_pPiece->down();
@@ -127,5 +206,99 @@ void    CTetrisScene::draw(ID2D1RenderTarget *pRenderTarget) {
 	//  落下ピースの描画
 	if (m_pPiece != NULL) {
 		m_pPiece->draw(pRenderTarget);
+	}
+
+	if (m_bGameOver) {
+		IDWriteTextFormat *pFormat = m_pSystem->GetSystemTextFormat();
+		rc.left = kOffsetX;
+		rc.top = kOffsetY;
+		rc.right = rc.left + kFieldWidth;
+		rc.bottom = rc.top + kFieldHeight;
+		DWRITE_TEXT_ALIGNMENT oldAlignment = pFormat->GetTextAlignment();
+		pFormat->SetTextAlignment(DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_CENTER);
+		pRenderTarget->DrawText(_T("GAME OVER"), 9, pFormat, &rc, m_ppBrushes[7]);
+		pFormat->SetTextAlignment(oldAlignment);
+		SAFE_RELEASE(pFormat);
+	}
+
+}
+
+
+//  与えられたピースとブロックや壁との当たり判定を行う。
+//  当たっていないとき true 衝突すると false
+BOOL CTetrisScene::collide(int col, int row, int size, int *block) {
+	int    c, r = row;
+	for (int i = 0; i < size; ++i) {
+		c = col;
+		for (int j = 0; j < size; ++j) {
+			if (block[i*PIECE_SIZE + j]>0) {
+				if (r >= kRows)
+					return    false;
+				if (c < 0)
+					return    false;
+				if (c >= kCols)
+					return    false;
+				if (r >= 0 && m_iBlocks[r*kCols + c] > 0)
+					return false;
+			}
+			c++;
+		}
+		r++;
+	}
+	return    true;
+}
+
+//  与えられたピースのデータを、フィールドにコピーする。
+void CTetrisScene::copy(int col, int row, int size, int *block) {
+
+	int    c;
+	int r = row;
+	for (int i = 0; i < size; ++i) {
+		c = col;
+		for (int j = 0; j < size; ++j) {
+			if (block[i*PIECE_SIZE + j] > 0) {
+				if (r < 0) {
+					m_bGameOver = true;  //  一番上の行より上にコピーしたらゲームオーバー
+					return;
+				}
+				m_iBlocks[r*kCols + c] = block[i*PIECE_SIZE + j];
+			}
+			++c;
+		}
+		r++;
+	}
+}
+
+
+//  フィールドをスキャン
+void CTetrisScene::scanField() {
+	int    delLines = 0;
+	int    i = kRows - 1;
+	int    j;
+	while (i >= 0) {
+		for (j = 0; j < kCols; ++j) {
+			if (m_iBlocks[i*kCols + j] == 0)
+				break;
+		}
+		if (j == kCols) {
+			++delLines;
+			deleteLine(i);
+		}
+		else {
+			--i;
+		}
+	}
+}
+
+//  行の削除
+void CTetrisScene::deleteLine(int line) {
+	int    c;
+	for (int j = line; j > 0; --j) {
+		for (c = 0; c < kCols; ++c) {
+			m_iBlocks[j*kCols + c] = m_iBlocks[(j - 1)*kCols + c];
+		}
+	}
+	for (c = 0; c < kCols; ++c) {
+		m_iBlocks[c] = 0;
 	}
 }

@@ -2,6 +2,13 @@
 #ifndef __IGAMESCENE_H__
 #include "IGameScene.h"
 #endif
+
+enum TetrisPhase {
+	TETRISPHASE_INIT = 0,
+	TETRISPHASE_GAME = 0x100,
+	TETRISPHASE_WAIT = 0x101,
+	TETRISPHASE_GAMEOVER = 0x200
+};
 class CSelector;
 enum GameSceneResultCode;
 struct ID2D1RenderTarget;
@@ -18,6 +25,10 @@ public:
 	virtual void    draw(ID2D1RenderTarget *pRenderTarget) override;
 	virtual void    reset();
 	virtual BOOL    doPiece();
+	virtual BOOL    collide(int col, int row, int size, int *block);
+	virtual void    copy(int col, int row, int size, int *block);
+	virtual void    scanField();
+	virtual void    deleteLine(int line);
 protected:
 	CSelector * m_pSystem;
 	int         *m_iBlocks;
@@ -37,4 +48,16 @@ protected:
 	static const int kOffsetY = 0;
 	static const int kFieldWidth = 480;
 	static const int kFieldHeight = 480;
+
+	//  ÉLÅ[ì¸óÕ
+	BOOL    m_bEnter2;  //  òAéÀñhé~
+	BOOL    m_bDown2;   //  òAéÀñhé~
+	int     m_iLeftWait;
+	int     m_iRightWait;
+
+
+	//  èÛë‘
+	enum TetrisPhase    m_eTetrisPhase;
+	int  m_iPhaseWait;
+
 };

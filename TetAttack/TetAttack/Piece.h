@@ -10,6 +10,8 @@ public:
 	void    setPiece(int type, int angle);
 	BOOL    down();
 	void    draw(ID2D1RenderTarget *pRenderTarget);
+	void    moveHorizontal(int amount);
+	void    rotate();
 protected:
 	int    m_iBlocks[PIECE_SIZE*PIECE_SIZE];
 	CTetrisScene    *m_pScene;

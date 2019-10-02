@@ -44,7 +44,20 @@ void CPiece::setPiece(int type, int angle) {
 //  落下ピースを一段階落下
 BOOL CPiece::down() {
 	int    r = m_iRowY + 1;
-	m_iRowY = r;
+
+	//m_iRowY = r;
+
+	//  フィールド上のブロックとの当たり判定
+	if (m_pScene->collide(m_iColX, r, m_iSize, m_iBlocks)) {
+		//  他のブロックと衝突しないとき
+		m_iRowY = r;
+		return    true;
+	}
+
+	//  フィールドへコピー
+	m_pScene->copy(m_iColX, m_iRowY, m_iSize, m_iBlocks);
+	resetPos();
+
 	return    false;
 }
 
@@ -83,6 +96,28 @@ void CPiece::draw(ID2D1RenderTarget *pRenderTarget) {
 		}
 		y = ny;
 	}
+}
+
+
+//  ブロックを横方向に移動する。
+//  @param
+//      amount : 右方向への移動量（マイナスで左）
+void    CPiece::moveHorizontal(int amount) {
+	int c = m_iColX + amount;
+	if (m_pScene->collide(c, m_iRowY, m_iSize, m_iBlocks)) {
+		m_iColX = c;
+	}
+}
+
+//  ブロックを回転する。
+void    CPiece::rotate() {
+	int    r = (m_iAngle + 1) % 4;
+	setPiece(m_iType, r);
+	if (m_pScene->collide(m_iColX, m_iRowY, m_iSize, m_iBlocks)) {
+		m_iAngle = r;
+		return;
+	}
+	setPiece(m_iType, m_iAngle);
 }
 
 
