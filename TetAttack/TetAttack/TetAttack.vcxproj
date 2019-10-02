@@ -90,10 +90,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\include;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\Win32\Debug;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -104,10 +106,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\include;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\x64\Debug;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,12 +124,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\include;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\Win32\Release;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\Win32\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,21 +144,38 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\include;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\oggvorbis\x64\Release;C:\Users\hsatomura\Desktop\Git\AuroraArc\TetAttack\TetAttack\Ogg\ogglib\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DirectSound.h" />
+    <ClInclude Include="IOneshotSound.h" />
+    <ClInclude Include="IStreamingSound.h" />
+    <ClInclude Include="Mp3Sound.h" />
+    <ClInclude Include="OggSound.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SDKwavefile.h" />
+    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TetAttack.h" />
+    <ClInclude Include="WaveSound.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DirectSound.cpp" />
+    <ClCompile Include="IOneshotSound.cpp" />
+    <ClCompile Include="IStreamingSound.cpp" />
+    <ClCompile Include="Mp3Sound.cpp" />
+    <ClCompile Include="OggSound.cpp" />
+    <ClCompile Include="SDKwavefile.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -160,6 +183,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TetAttack.cpp" />
+    <ClCompile Include="WaveSound.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TetAttack.rc" />

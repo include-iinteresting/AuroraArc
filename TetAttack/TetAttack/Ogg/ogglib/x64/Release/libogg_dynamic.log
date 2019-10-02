@@ -1,0 +1,19 @@
+﻿Build started 2019/08/16 4:57:41.
+     1>Project "C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\libogg_dynamic.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (libogg_static.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I..\..\include /nologo /W4 /WX- /O2 /Ob2 /Oi /Ot /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D LIBOGG_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /GF /Gm- /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TC /wd4244 /errorReport:prompt ..\..\src\bitwise.c ..\..\src\framing.c
+         bitwise.c
+         framing.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"..\ogg.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.pdb" /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.lib" /MACHINE:X64 /DLL x64\Release\bitwise.obj
+         x64\Release\framing.obj
+            Creating library C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.lib and object C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.exp
+         Generating code
+         Finished generating code
+         libogg_dynamic.vcxproj -> C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\x64\Release\libogg.dll
+     1>Done Building Project "C:\Users\hsatomura\Desktop\libogg-1.3.3\libogg-1.3.3\win32\VS2015\libogg_dynamic.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.27
