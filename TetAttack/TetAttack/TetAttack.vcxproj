@@ -167,6 +167,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TetAttack.h" />
     <ClInclude Include="WaveSound.h" />
+    <ClInclude Include="XBoxController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectSound.cpp" />
@@ -184,6 +185,7 @@
     </ClCompile>
     <ClCompile Include="TetAttack.cpp" />
     <ClCompile Include="WaveSound.cpp" />
+    <ClCompile Include="XBoxController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TetAttack.rc" />
