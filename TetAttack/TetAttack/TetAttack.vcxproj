@@ -161,6 +161,7 @@
     <ClInclude Include="IStreamingSound.h" />
     <ClInclude Include="Mp3Sound.h" />
     <ClInclude Include="OggSound.h" />
+    <ClInclude Include="Piece.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SDKwavefile.h" />
     <ClInclude Include="Selector.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="IStreamingSound.cpp" />
     <ClCompile Include="Mp3Sound.cpp" />
     <ClCompile Include="OggSound.cpp" />
+    <ClCompile Include="Piece.cpp" />
     <ClCompile Include="SDKwavefile.cpp" />
     <ClCompile Include="Selector.cpp" />
     <ClCompile Include="SoundManager.cpp" />

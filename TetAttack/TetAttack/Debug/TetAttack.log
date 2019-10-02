@@ -1,4 +1,4 @@
-﻿2019/10/02 14:15:08 にビルドを開始しました。
+﻿2019/10/02 15:30:24 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" (Build ターゲット)。
      1>ツール バージョン "15.0" でビルドしています。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "_CheckForInvalidConfigurationAndPlatform" (ターゲット "SetTelemetryEnvironmentVariables" は依存):
@@ -22,7 +22,7 @@
          VSTEL_SolutionSessionID={9CD3CF72-4961-4E6A-A8D5-01EE7C3426B9}
        タスク "SetEnv" の実行が終了しました。
        タスク "SetEnv"
-         VSTEL_CurrentSolutionBuildID=536641765
+         VSTEL_CurrentSolutionBuildID=541157156
        タスク "SetEnv" の実行が終了しました。
        タスク "SetEnv"
          VSTEL_ProjectID={65328BEC-2739-4374-8F58-E1FE58E03523}
@@ -34,7 +34,7 @@
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "_PrepareForReferenceResolution" (ターゲット "ResolveReferences" は依存):
        false 条件のため、タスク "Message" を省略しました。('$(_REFERENCE_DEBUG)'=='true') は (''=='true') として評価されました。
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "_PrepareForReferenceResolution" のビルドが終了しました。
-       false 条件により、ターゲット "ComputeCrtSDKReference" を省略しました。('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;WaveSound.cpp;XBoxController.cpp'!='' and 'false'=='true' and '' != 'false') として評価されました。
+       false 条件により、ターゲット "ComputeCrtSDKReference" を省略しました。('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;Piece.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;TetrisScene.cpp;WaveSound.cpp;XBoxController.cpp'!='' and 'false'=='true' and '' != 'false') として評価されました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "BeforeResolveReferences" (ターゲット "ResolveReferences" は依存):
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "BeforeResolveReferences" のビルドが終了しました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "AssignProjectConfiguration" (ターゲット "ResolveReferences" は依存):
@@ -128,7 +128,7 @@
        タスク "MakeDir" の実行が終了しました。
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "PrepareForBuild" のビルドが終了しました。
        ターゲット "_PrepareForReferenceResolution" を省略しました。以前に正しくビルドされていました。
-       false 条件により、ターゲット "ComputeCrtSDKReference" を省略しました。('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;WaveSound.cpp;XBoxController.cpp'!='' and 'false'=='true' and '' != 'false') として評価されました。
+       false 条件により、ターゲット "ComputeCrtSDKReference" を省略しました。('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;Piece.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;TetrisScene.cpp;WaveSound.cpp;XBoxController.cpp'!='' and 'false'=='true' and '' != 'false') として評価されました。
        false 条件により、ターゲット "GetInstalledSDKLocations" を省略しました。('@(SDKReference)' != '') は ('' != '') として評価されました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "ResolveSDKReferences" (ターゲット "ResolveAssemblyReferences" は依存):
        false 条件のため、タスク "ResolveSDKReference" を省略しました。('@(SDKReference)'!='') は (''!='') として評価されました。
@@ -235,11 +235,13 @@
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'IStreamingSound.cpp' != 'IStreamingSound.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'Mp3Sound.cpp' != 'Mp3Sound.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'OggSound.cpp' != 'OggSound.cpp' and 'Debug\' == 'Debug\') として評価されました。
+       false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'Piece.cpp' != 'Piece.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'SDKwavefile.cpp' != 'SDKwavefile.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'Selector.cpp' != 'Selector.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'SoundManager.cpp' != 'SoundManager.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'stdafx.cpp' != 'stdafx.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'TetAttack.cpp' != 'TetAttack.cpp' and 'Debug\' == 'Debug\') として評価されました。
+       false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'TetrisScene.cpp' != 'TetrisScene.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'WaveSound.cpp' != 'WaveSound.cpp' and 'Debug\' == 'Debug\') として評価されました。
        false 条件のため、タスク "VCMessage" を省略しました。('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') は ('' != 'true' and 'XBoxController.cpp' != 'XBoxController.cpp' and 'Debug\' == 'Debug\') として評価されました。
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "WarnCompileDuplicatedFilename" のビルドが終了しました。
@@ -265,7 +267,7 @@
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "SelectClCompile" (ターゲット "ClCompile" は依存):
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "SelectClCompile" のビルドが終了しました。
        false 条件により、ターゲット "GenerateTargetFrameworkMonikerAttribute" を省略しました。('$(GenerateTargetFrameworkAttribute)' == 'true') は ('false' == 'true') として評価されました。
-       false 条件により、ターゲット "ManagedIncrementalBuildPreProcessDependencyGraph" を省略しました。('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;WaveSound.cpp;XBoxController.cpp' != '' and 'false' == 'True') として評価されました。
+       false 条件により、ターゲット "ManagedIncrementalBuildPreProcessDependencyGraph" を省略しました。('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;Piece.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;TetrisScene.cpp;WaveSound.cpp;XBoxController.cpp' != '' and 'false' == 'True') として評価されました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "ClCompile" (ターゲット "_ClCompile" は依存):
        false 条件のため、タスク "Delete" を省略しました。('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) は ('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'Debug\vc141.pdb' != '' and !Exists(Debug\vc141.pdb)) として評価されました。
        false 条件のため、タスク "CL" を省略しました。('%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '') は ('Use' == 'Create' and ''!='true' and '' == '') として評価されました。
@@ -281,38 +283,42 @@
        タスク "CL"
          以下から作成されたキャッシュ内の入力依存関係テーブルを使用しています:
          	C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\Debug\TetAttack.tlog\CL.read.1.tlog
-         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DIRECTSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\IGAMESCENE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\IONESHOTSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\ISTREAMINGSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\MP3SOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\OGGSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SDKWAVEFILE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SELECTOR.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SOUNDMANAGER.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETATTACK.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\WAVESOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\XBOXCONTROLLER.CPP に対する出力:
+         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DIRECTSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\IGAMESCENE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\IONESHOTSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\ISTREAMINGSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\MP3SOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\OGGSOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\PIECE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SDKWAVEFILE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SELECTOR.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\SOUNDMANAGER.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETATTACK.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETRISSCENE.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\WAVESOUND.CPP|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\XBOXCONTROLLER.CPP に対する出力:
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ
+         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\PIECE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ
+         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ
-         C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.cpp が 2019/10/02 14:15:08 で変更されたため、TetAttack.cpp はコンパイルされます。
-         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETATTACK.CPP に対する出力:
-         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ
+         C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetrisScene.cpp が 2019/10/02 15:30:23 で変更されたため、TetrisScene.cpp はコンパイルされます。
+         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETRISSCENE.CPP に対する出力:
+         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ
          書き込み追跡ログ:
          	Debug\TetAttack.tlog\CL.write.1.tlog
          ツールに渡された環境変数:
-           VS_UNICODE_OUTPUT=1064
-         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /IOgg\oggvorbis\include /IOgg\ogglib\include /ZI /nologo /W3 /WX- /diagnostics:classic /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\TetAttack.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt TetAttack.cpp
+           VS_UNICODE_OUTPUT=2140
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /IOgg\oggvorbis\include /IOgg\ogglib\include /ZI /nologo /W3 /WX- /diagnostics:classic /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\TetAttack.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt TetrisScene.cpp
          トラッキング コマンド:
-         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\Debug\TetAttack.tlog /r C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETATTACK.CPP /b MSBuildConsole_CancelEventa501447caa554756abe104cbd392df8b  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe"  /c /IOgg\oggvorbis\include /IOgg\ogglib\include /ZI /nologo /W3 /WX- /diagnostics:classic /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\TetAttack.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt TetAttack.cpp
-         TetAttack.cpp
-     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetattack.cpp(70): warning C4302: '型キャスト': 'LPWSTR' から 'WORD' へ切り詰めます。
-     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetattack.cpp(71): warning C4302: '型キャスト': 'LPWSTR' から 'WORD' へ切り詰めます。
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\Debug\TetAttack.tlog /r C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\TETRISSCENE.CPP /b MSBuildConsole_CancelEvent8f574d48cddf4390b46343c30806aa7d  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe"  /c /IOgg\oggvorbis\include /IOgg\ogglib\include /ZI /nologo /W3 /WX- /diagnostics:classic /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\TetAttack.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt TetrisScene.cpp
+         TetrisScene.cpp
+     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(117): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(118): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(119): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(120): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
        タスク "CL" の実行が終了しました。
        false 条件のため、タスク "CL" を省略しました。('%(ClCompile.PrecompiledHeader)' != 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '' and @(ClCompile) != '') は ('Create' != 'Create' and ''!='true' and '' == '' and stdafx.cpp != '') として評価されました。
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "ClCompile" のビルドが終了しました。
        false 条件により、ターゲット "RunSelectedFileNativeCodeAnalysis" を省略しました。('$(Language)'=='C++' and '$(SelectedFiles)'!='' and '$(RunCodeAnalysisOnThisProject)'=='true') は ('C++'=='C++' and ''!='' and ''=='true') として評価されました。
        false 条件により、ターゲット "CppCoreCheck_ValidateForSelectedFile" を省略しました。('$(EnableCppCoreCheck)'=='true' or '$(EnableExperimentalCppCoreCheck)'=='true') は ('false'=='true' or 'false'=='true') として評価されました。
-       false 条件により、ターゲット "ManagedIncrementalBuildPostProcessDependencyGraph" を省略しました。('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;WaveSound.cpp;XBoxController.cpp' != '' and 'false' == 'True') として評価されました。
+       false 条件により、ターゲット "ManagedIncrementalBuildPostProcessDependencyGraph" を省略しました。('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') は ('DirectSound.cpp;IGameScene.cpp;IOneshotSound.cpp;IStreamingSound.cpp;Mp3Sound.cpp;OggSound.cpp;Piece.cpp;SDKwavefile.cpp;Selector.cpp;SoundManager.cpp;stdafx.cpp;TetAttack.cpp;TetrisScene.cpp;WaveSound.cpp;XBoxController.cpp' != '' and 'false' == 'True') として評価されました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "AfterClCompile" (ターゲット "_ClCompile" は依存):
      1>プロジェクト "TetAttack.vcxproj" 内のターゲット "AfterClCompile" のビルドが終了しました。
      1>ファイル "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" 内にある、プロジェクト "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" からのターゲット "_ClCompile" (ターゲット "_BuildCompileAction" は依存):
@@ -441,11 +447,11 @@
          	Debug\TetAttack.tlog\link.write.1.tlog
          読み取り追跡ログ:
          	Debug\TetAttack.tlog\link.read.1.tlog
-         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ に対する出力:
+         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\PIECE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ に対する出力:
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\DEBUG\TETATTACK.EXE
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\DEBUG\TETATTACK.ILK
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\DEBUG\TETATTACK.PDB
-         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ に対する入力:
+         C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\PIECE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ に対する入力:
          	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.16299.0\UM\X86\KERNEL32.LIB
          	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.16299.0\UM\X86\USER32.LIB
          	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.16299.0\UM\X86\GDI32.LIB
@@ -465,11 +471,13 @@
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ
+         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\PIECE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ
+         	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ
          	C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ
          	C:\WINDOWS\SYSTEM32\TZRES.DLL
@@ -490,10 +498,11 @@
          	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.13.26128\LIB\X86\VCRUNTIMED.LIB
          	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.16299.0\UCRT\X86\UCRTD.LIB
          	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.13.26128\LIB\X86\LIBCMTD.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.13.26128\BIN\HOSTX86\X86\MSPDBSRV.EXE
          	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.13.26128\BIN\HOSTX86\X86\VCTIP.EXE
-         ソースのコンパイルが必要です。入力 C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ は出力 C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\DEBUG\TETATTACK.PDB よりも新しいです。
+         ソースのコンパイルが必要です。入力 C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ は出力 C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\DEBUG\TETATTACK.PDB よりも新しいです。
          ツールに渡された環境変数:
-           VS_UNICODE_OUTPUT=2128
+           VS_UNICODE_OUTPUT=1132
          C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.exe" /INCREMENTAL /NOLOGO /LIBPATH:Ogg\oggvorbis\Win32\Debug /LIBPATH:Ogg\ogglib\Win32\Debug kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.lib" /MACHINE:X86 Debug\TetAttack.res
          Debug\DirectSound.obj
          Debug\IGameScene.obj
@@ -501,26 +510,30 @@
          Debug\IStreamingSound.obj
          Debug\Mp3Sound.obj
          Debug\OggSound.obj
+         Debug\Piece.obj
          Debug\SDKwavefile.obj
          Debug\Selector.obj
          Debug\SoundManager.obj
          Debug\stdafx.obj
          Debug\TetAttack.obj
+         Debug\TetrisScene.obj
          Debug\WaveSound.obj
          Debug\XBoxController.obj
          トラッキング コマンド:
-         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\Debug\TetAttack.tlog /r "C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ" /b MSBuildConsole_CancelEvent87eb3a96c5e54ca9aa59731a14bd7662  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.exe" /INCREMENTAL /NOLOGO /LIBPATH:Ogg\oggvorbis\Win32\Debug /LIBPATH:Ogg\ogglib\Win32\Debug kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.lib" /MACHINE:X86 Debug\TetAttack.res
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\Debug\TetAttack.tlog /r "C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\DIRECTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IGAMESCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\IONESHOTSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\ISTREAMINGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\MP3SOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\OGGSOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\PIECE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SDKWAVEFILE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SELECTOR.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\SOUNDMANAGER.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\STDAFX.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETATTACK.RES|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\TETRISSCENE.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\WAVESOUND.OBJ|C:\USERS\RYAMADA\SOURCE\REPOS\AURORAARC\TETATTACK\TETATTACK\DEBUG\XBOXCONTROLLER.OBJ" /b MSBuildConsole_CancelEvent3a8166688ba6496d9b831ba09f9faa6b  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.exe" /INCREMENTAL /NOLOGO /LIBPATH:Ogg\oggvorbis\Win32\Debug /LIBPATH:Ogg\ogglib\Win32\Debug kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ryamada\source\repos\AuroraArc\TetAttack\Debug\TetAttack.lib" /MACHINE:X86 Debug\TetAttack.res
          Debug\DirectSound.obj
          Debug\IGameScene.obj
          Debug\IOneshotSound.obj
          Debug\IStreamingSound.obj
          Debug\Mp3Sound.obj
          Debug\OggSound.obj
+         Debug\Piece.obj
          Debug\SDKwavefile.obj
          Debug\Selector.obj
          Debug\SoundManager.obj
          Debug\stdafx.obj
          Debug\TetAttack.obj
+         Debug\TetrisScene.obj
          Debug\WaveSound.obj
          Debug\XBoxController.obj
        タスク "Link" の実行が終了しました。
@@ -663,10 +676,12 @@
 
        "C:\Users\ryamada\source\repos\AuroraArc\TetAttack\TetAttack\TetAttack.vcxproj" (Build ターゲット) (1) ->
        (ClCompile ターゲット) -> 
-         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetattack.cpp(70): warning C4302: '型キャスト': 'LPWSTR' から 'WORD' へ切り詰めます。
-         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetattack.cpp(71): warning C4302: '型キャスト': 'LPWSTR' から 'WORD' へ切り詰めます。
+         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(117): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(118): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(119): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+         c:\users\ryamada\source\repos\auroraarc\tetattack\tetattack\tetrisscene.cpp(120): warning C4244: '=': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
 
-    2 個の警告
+    4 個の警告
     0 エラー
 
-経過時間 00:00:00.94
+経過時間 00:00:01.08
