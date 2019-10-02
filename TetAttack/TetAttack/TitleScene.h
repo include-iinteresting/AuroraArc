@@ -7,7 +7,7 @@ class CTitleScene :
 {
 public:
 	CTitleScene();
-	virtual ~CTitleSceme();
+	virtual ~CTitleScene();
 	virtual	GameSceneResultCode	move()	override;
 	virtual	void	draw(ID2D1RenderTarget *pRenderTarget)	override;
 };

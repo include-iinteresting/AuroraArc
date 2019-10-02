@@ -170,7 +170,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TetAttack.h" />
     <ClInclude Include="TetrisScene.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="TitleScene.h" />
     <ClInclude Include="WaveSound.h" />
     <ClInclude Include="XBoxController.h" />
   </ItemGroup>
@@ -193,7 +193,7 @@
     </ClCompile>
     <ClCompile Include="TetAttack.cpp" />
     <ClCompile Include="TetrisScene.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="WaveSound.cpp" />
     <ClCompile Include="XBoxController.cpp" />
   </ItemGroup>
