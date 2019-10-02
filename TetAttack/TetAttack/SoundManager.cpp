@@ -683,6 +683,32 @@ void CSoundManager::StreamDone(unsigned int numSound)
 
 
 /**
+* @brief	指定したストリーミングサウンドの音量を設定する
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @param	[in]	lVolume		設定する音量の値
+*/
+void CSoundManager::StreamSetVolume(unsigned int numSound, LONG lVolume)
+{
+	SoundManagerImpl *pObj = SoundManagerImpl::GetInstance();
+
+	pObj->StreamSetVolume(numSound, lVolume);
+}
+
+
+/**
+* @brief	指定したストリーミングサウンドオブジェクトの音量を取得する
+* @param	[in]	numSound	サウンドオブジェクトの番号
+* @return	指定したストリーミングサウンドオブジェクトの音量
+*/
+LONG CSoundManager::StreamGetVolume(unsigned int numSound)
+{
+	SoundManagerImpl *pObj = SoundManagerImpl::GetInstance();
+
+	return pObj->StreamGetVolume(numSound);
+}
+
+
+/**
 * @brief	ワンショットサウンドの読み込み
 * @param	[in]	pFilename	ファイル名
 */
