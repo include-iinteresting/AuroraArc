@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ddsfunctions.h" />
     <ClInclude Include="DirectSound.h" />
     <ClInclude Include="IGameScene.h" />
     <ClInclude Include="IOneshotSound.h" />
@@ -170,11 +171,14 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TetAttack.h" />
     <ClInclude Include="TetrisScene.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="tgafunctions.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="WaveSound.h" />
     <ClInclude Include="XBoxController.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ddsfunctions.cpp" />
     <ClCompile Include="DirectSound.cpp" />
     <ClCompile Include="IGameScene.cpp" />
     <ClCompile Include="IOneshotSound.cpp" />
@@ -193,6 +197,8 @@
     </ClCompile>
     <ClCompile Include="TetAttack.cpp" />
     <ClCompile Include="TetrisScene.cpp" />
+    <ClCompile Include="TextureLoader.cpp" />
+    <ClCompile Include="tgafunctions.cpp" />
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="WaveSound.cpp" />
     <ClCompile Include="XBoxController.cpp" />
