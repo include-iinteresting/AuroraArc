@@ -27,6 +27,7 @@ GameSceneResultCode CTitleScene::move()
 	return GameSceneResultCode::GAMESCENE_DEFAULT;
 }
 
+
 /**
 * @brief	pRenderTarget	レンダーターゲット
 */
