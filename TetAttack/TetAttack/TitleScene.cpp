@@ -14,6 +14,8 @@
 CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 {
 	InitTexture(pRenderTarget);
+
+	m_ePhase = TitlePhase::TITLEPHASE_INIT;
 }
 
 
@@ -22,6 +24,7 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 */
 CTitleScene::~CTitleScene()
 {
+	SAFE_RELEASE(m_pBGImage);
 }
 
 
@@ -31,12 +34,26 @@ CTitleScene::~CTitleScene()
 */
 GameSceneResultCode CTitleScene::move()
 {
+	switch (m_ePhase)
+	{
+	case TITLEPHASE_INIT:
+		m_ePhase = TitlePhase::TITLEPHASE_RUN;
+		break;
+	case TITLEPHASE_RUN:
+		if (GetAsyncKeyState(VK_SPACE))
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		break;
+	case TITLEPHASE_DONE:
+		return GameSceneResultCode::GAMESCENE_END_OK;
+	}
+
 	return GameSceneResultCode::GAMESCENE_DEFAULT;
 }
 
 
 /**
-* @brief	pRenderTarget	レンダーターゲット
+* @brief	描画
+* @param	[in]	pRenderTarget	レンダーターゲット
 */
 void CTitleScene::draw(ID2D1RenderTarget * pRenderTarget)
 {
