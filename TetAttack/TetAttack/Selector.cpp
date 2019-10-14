@@ -62,7 +62,7 @@ void CSelector::doAnim() {
 	case    GAMEPHASE_INIT:
 		m_eGamePhase = GAMEPHASE_RESET;
 	case    GAMEPHASE_RESET:
-		m_pScene = new CTetrisScene(this);
+		m_pScene = new CTetrisScene(this);	
 		//m_pScene = new CTetrisScene(this);
 		m_eGamePhase = GAMEPHASE_GAME;
 		//++m_iWaitCount;
