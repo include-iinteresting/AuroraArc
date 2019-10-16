@@ -19,6 +19,12 @@
     <Filter Include="XBoxController">
       <UniqueIdentifier>{2eb0ed37-a00c-4685-b48c-c304c77b85bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{9d3d8cb1-d3d7-4e4c-9e01-8f97cd65653e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureLoader">
+      <UniqueIdentifier>{530ac97f-e293-4fd2-8cde-357c4a886c78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -48,15 +54,6 @@
     <ClInclude Include="TitleScene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="TextureLoader.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="tgafunctions.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ddsfunctions.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="DirectSound.h">
       <Filter>Sound</Filter>
     </ClInclude>
@@ -84,6 +81,21 @@
     <ClInclude Include="XBoxController.h">
       <Filter>XBoxController</Filter>
     </ClInclude>
+    <ClInclude Include="SocketClient.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketServer.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="ddsfunctions.h">
+      <Filter>TextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>TextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="tgafunctions.h">
+      <Filter>TextureLoader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -105,15 +117,6 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="TitleScene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureLoader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="tgafunctions.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ddsfunctions.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="DirectSound.cpp">
@@ -142,6 +145,21 @@
     </ClCompile>
     <ClCompile Include="XBoxController.cpp">
       <Filter>XBoxController</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketClient.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketServer.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="ddsfunctions.cpp">
+      <Filter>TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="tgafunctions.cpp">
+      <Filter>TextureLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

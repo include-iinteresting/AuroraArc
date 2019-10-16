@@ -166,6 +166,8 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SDKwavefile.h" />
     <ClInclude Include="Selector.h" />
+    <ClInclude Include="SocketClient.h" />
+    <ClInclude Include="SocketServer.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -188,6 +190,8 @@
     <ClCompile Include="Piece.cpp" />
     <ClCompile Include="SDKwavefile.cpp" />
     <ClCompile Include="Selector.cpp" />
+    <ClCompile Include="SocketClient.cpp" />
+    <ClCompile Include="SocketServer.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
