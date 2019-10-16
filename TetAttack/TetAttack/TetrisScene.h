@@ -40,14 +40,14 @@ protected:
 	CPiece  *m_pPiece;
 	int     m_iWait;
 
-	static const int kCols = 10;
-	static const int kRows = 10;
+	static const int kCols = 8;//ピースのサイズ元は10
+	static const int kRows = 8;//ピースのサイズ
 	static const int kNumColors = 9;
 	static const int kSentinelID = 0xff;
-	static const int kOffsetX = 0;
-	static const int kOffsetY = 0;
-	static const int kFieldWidth = 480;
-	static const int kFieldHeight = 480;
+	static const int kOffsetX = 300;//表示位置
+	static const int kOffsetY = 0;//表示位置
+	static const int kFieldWidth = 520;// フィールドのサイズ？元は480
+	static const int kFieldHeight = 520;
 
 	//  キー入力
 	BOOL    m_bEnter2;  //  連射防止

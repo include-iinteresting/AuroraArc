@@ -185,6 +185,7 @@ void    CTetrisScene::draw(ID2D1RenderTarget *pRenderTarget) {
 	D2D1_RECT_F    rc;
 	x = 0, y = 0;
 
+
 	for (int r = 0; r < kRows; ++r) {
 		x = 0;
 		ny = (r + 1) * kFieldHeight / kRows;
@@ -207,6 +208,7 @@ void    CTetrisScene::draw(ID2D1RenderTarget *pRenderTarget) {
 	if (m_pPiece != NULL) {
 		m_pPiece->draw(pRenderTarget);
 	}
+
 
 	if (m_bGameOver) {
 		IDWriteTextFormat *pFormat = m_pSystem->GetSystemTextFormat();

@@ -104,7 +104,7 @@ void CPiece::draw(ID2D1RenderTarget *pRenderTarget) {
 //      amount : 右方向への移動量（マイナスで左）
 void    CPiece::moveHorizontal(int amount) {
 	int c = m_iColX + amount;
-	if (m_pScene->collide(c, m_iRowY, m_iSize, m_iBlocks)) {
+	if (m_pScene->collide(c, m_iRowY, m_iSize, m_iBlocks)) {//壁やほかのブロックと衝突しないか確認
 		m_iColX = c;
 	}
 }
@@ -113,7 +113,7 @@ void    CPiece::moveHorizontal(int amount) {
 void    CPiece::rotate() {
 	int    r = (m_iAngle + 1) % 4;
 	setPiece(m_iType, r);
-	if (m_pScene->collide(m_iColX, m_iRowY, m_iSize, m_iBlocks)) {
+	if (m_pScene->collide(m_iColX, m_iRowY, m_iSize, m_iBlocks)) {//壁やほかのブロックと衝突しないか確認
 		m_iAngle = r;
 		return;
 	}

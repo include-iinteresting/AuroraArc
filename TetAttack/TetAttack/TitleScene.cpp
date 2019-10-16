@@ -3,7 +3,7 @@
 #include <d2d1.h>
 #include "TextureLoader.h"
 
-#define BG_TEXTURE_PATH _T("res/TitleBG.png")
+#define BG_TEXTURE_PATH _T("res/tetataBG.png")
 
 #undef SAFE_RELEASE
 #define SAFE_RELEASE(o) if(o) { (o)->Release(); o = NULL; };

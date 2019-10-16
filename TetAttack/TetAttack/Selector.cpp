@@ -3,6 +3,8 @@
 #include <dwrite.h>
 #include "Selector.h"
 #include "IGameScene.h"
+
+#include "TitleScene.h"
 #include "TetrisScene.h"
 
 CSelector::CSelector(ID2D1RenderTarget *pRenderTarget)
@@ -56,16 +58,27 @@ CSelector::~CSelector(void)
 	SAFE_RELEASE(m_pTextFormat);
 }
 
-void CSelector::doAnim() {
-
+void CSelector::doAnim() 
+{
+	GameSceneResultCode rc = GameSceneResultCode::GAMESCENE_DEFAULT;
 	switch (m_eGamePhase) {
 	case    GAMEPHASE_INIT:
 		m_eGamePhase = GAMEPHASE_RESET;
 	case    GAMEPHASE_RESET:
-		m_pScene = new CTetrisScene(this);	
+		m_pScene = new CTitleScene(m_pRenderTarget);
 		//m_pScene = new CTetrisScene(this);
-		m_eGamePhase = GAMEPHASE_GAME;
+		m_eGamePhase = GAMEPHASE_TITLE;
 		//++m_iWaitCount;
+	case	GAMEPHASE_TITLE:
+		if (m_pScene)
+			rc = m_pScene->move();
+
+		if (rc == GameSceneResultCode::GAMESCENE_DEFAULT)
+			break;
+		
+		SAFE_DELETE(m_pScene);
+		m_pScene = new CTetrisScene(this);
+		m_eGamePhase = GAMEPHASE_GAME;
 	case    GAMEPHASE_GAME:
 		if (m_pScene != NULL) {
 			m_pScene->move();
