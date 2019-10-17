@@ -9,6 +9,8 @@
 */
 CSocketClient::CSocketClient()
 {
+	winsockInit(&m_wsaData);
+	CreateSocket(&m_Socket);
 }
 
 
@@ -17,7 +19,7 @@ CSocketClient::CSocketClient()
 */
 CSocketClient::~CSocketClient()
 {
-
+	closesocket(m_Socket);
 	//	Winsock2の終了処理
 	WSACleanup();
 }
@@ -41,8 +43,9 @@ bool CSocketClient::ConnectServer()
 void CSocketClient::Receive(char *pBuffer)
 {
 	// サーバからデータを受信
-	memset(pBuffer, 0, sizeof(*pBuffer));
-	int n = recv(m_Socket, pBuffer, sizeof(*pBuffer), 0);
+	memset(pBuffer, 0, sizeof(pBuffer));
+	size_t n = recv(m_Socket, pBuffer, sizeof(pBuffer)*8, 0);
+	int a = 0;
 }
 
 
