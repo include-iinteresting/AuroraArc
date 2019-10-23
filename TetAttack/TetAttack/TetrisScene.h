@@ -55,7 +55,7 @@ protected:
 	int     m_iLeftWait;
 	int     m_iRightWait;
 
-
+		
 	//  ó‘Ô
 	enum TetrisPhase    m_eTetrisPhase;
 	int  m_iPhaseWait;
