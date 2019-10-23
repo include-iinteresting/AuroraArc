@@ -20,10 +20,6 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 
 	m_pSocket = new CSocketClient();
 	m_pSocket->ConnectServer();
-
-	char pBuf[32] = { 0 };
-	m_pSocket->Receive(pBuf);
-	int a = 0;
 }
 
 
