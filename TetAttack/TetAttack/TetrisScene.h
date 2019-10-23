@@ -41,7 +41,7 @@ protected:
 	int     m_iWait;
 
 	static const int kCols = 8;//ピースのサイズ元は10
-	static const int kRows = 8;//ピースのサイズ
+	static const int kRows = 8;//ピースのサイず
 	static const int kNumColors = 9;
 	static const int kSentinelID = 0xff;
 	static const int kOffsetX = 300;//表示位置
