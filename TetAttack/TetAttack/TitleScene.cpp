@@ -2,6 +2,7 @@
 #include "TitleScene.h"
 #include <d2d1.h>
 #include "TextureLoader.h"
+#include "SocketClient.h"
 
 #define BG_TEXTURE_PATH _T("res/tetataBG.png")
 
@@ -16,6 +17,9 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 	InitTexture(pRenderTarget);
 
 	m_ePhase = TitlePhase::TITLEPHASE_INIT;
+
+	m_pSocket = new CSocketClient();
+	m_pSocket->ConnectServer();
 }
 
 
@@ -25,6 +29,11 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 CTitleScene::~CTitleScene()
 {
 	SAFE_RELEASE(m_pBGImage);
+	if (m_pSocket)
+	{
+		delete m_pSocket;
+		m_pSocket = NULL;
+	}
 }
 
 

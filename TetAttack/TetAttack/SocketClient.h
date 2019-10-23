@@ -8,7 +8,7 @@ public:
 	virtual ~CSocketClient();
 
 	bool	ConnectServer();
-	void	Receive(char *pBuffer);
+	void	Receive(char *pBuffer, size_t len);
 private:
 	bool	winsockInit(WSADATA *wsaData);	//!<	Winsockの初期化
 	bool	CreateSocket(SOCKET *pSocket);	//!<	ソケットの作成

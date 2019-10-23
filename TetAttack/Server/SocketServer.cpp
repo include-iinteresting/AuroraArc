@@ -14,9 +14,6 @@ CSocketServer::CSocketServer()
 
 	winsockInit(&m_wsaData);
 	
-	CreateSocket(&m_Socket);
-
-	_beginthread(ConnectThreadLauncher, 0, this);
 }
 
 
@@ -61,6 +58,10 @@ bool CSocketServer::winsockInit(WSADATA *wsaData)
 	{
 		return false;
 	}
+
+	CreateSocket(&m_Socket);
+
+	_beginthread(ConnectThreadLauncher, 0, this);
 
 	
 	return true;

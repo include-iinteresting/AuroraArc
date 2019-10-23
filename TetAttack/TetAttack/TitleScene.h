@@ -10,6 +10,8 @@ enum TitlePhase : short
 
 struct ID2D1Bitmap;
 
+class CSocketClient;
+
 class CTitleScene :
 	public IGameScene
 {
@@ -23,5 +25,7 @@ private:
 private:
 	ID2D1Bitmap *m_pBGImage;	//!	BGImage
 	TitlePhase	m_ePhase;		//!	TitlePhase
+
+	CSocketClient *m_pSocket;
 };
 
