@@ -139,6 +139,30 @@ void CSocketServer::ConnectThreadLauncher(void * arg)
 
 
 /**
+* @brief	データをクライアントに送信する
+* @param	[in]	sock		通信をするソケット
+* @param	[in]	pBuffer		データ
+* @param	[in]	len			送信するデータのサイズ
+*/
+void CSocketServer::Send(const SOCKET sock, char * pBuffer, size_t len)
+{
+	send(sock, pBuffer, len, 0);
+}
+
+
+/**
+* @brief	クライアントからデータを受信する
+* @param	[in]	sock		通信をするソケット
+* @param	[in]	pBuffer		クライアントから受信するデータを格納する場所
+* @param	[in]	len			クライアントから受信するデータのサイズ
+*/
+size_t CSocketServer::Receive(const SOCKET sock, char * pBuffer, size_t len)
+{
+	return recv(sock, pBuffer, len, 0);
+}
+
+
+/**
 * @brief	排他制御(ロック)
 */
 void CSocketServer::Lock()

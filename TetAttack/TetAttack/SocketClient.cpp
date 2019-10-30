@@ -39,10 +39,23 @@ bool CSocketClient::ConnectServer()
 
 /**
 * @brief	サーバーからデータを受信する
+* @param	[in]	pBuffer	受信するデータ
+* @param	[in]	len		受信するデータのサイズ
+* @return	size_t	受信したデータのサイズ
 */
-void CSocketClient::Receive(char *pBuffer, size_t len)
+size_t CSocketClient::Receive(char *pBuffer, size_t len)
 {
-	size_t n = recv(m_Socket, pBuffer, len, 0);
+	return recv(m_Socket, pBuffer, len, 0);
+}
+
+
+/**
+* @brief	サーバーにデータを送信する
+* @param	[in]	pBuffer		送信するデータ
+* @param	[in]	len			送信するデータのサイズ
+*/
+void CSocketClient::Send(char * pBuffer, size_t len)
+{
 }
 
 

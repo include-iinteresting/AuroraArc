@@ -24,6 +24,9 @@ private:
 	void	ConnectThread();
 	static void		ConnectThreadLauncher(void *arg);
 
+	void	Send(const SOCKET sock, char *pBuffer, size_t len);
+	size_t	Receive(const SOCKET sock, char *pBuffer, size_t len);
+
 	void	Lock();
 	void	Unlock();
 private:

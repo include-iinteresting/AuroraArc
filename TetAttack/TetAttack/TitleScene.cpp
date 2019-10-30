@@ -4,13 +4,14 @@
 #include "TextureLoader.h"
 #include "SocketClient.h"
 
-#define BG_TEXTURE_PATH _T("res/tetataBG.png")
+#define BG_TEXTURE_PATH _T("res/tetattack.png")
 
 #undef SAFE_RELEASE
 #define SAFE_RELEASE(o) if(o) { (o)->Release(); o = NULL; };
 
 /**
 * @brief	コンストラクタ
+* @param	[in]	pRenderTarget	レンダーターゲット
 */
 CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 {
@@ -20,6 +21,11 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 
 	m_pSocket = new CSocketClient();
 	m_pSocket->ConnectServer();
+
+	char pBuf[32];
+	memset(pBuf, 0, sizeof(pBuf));
+	m_pSocket->Receive(pBuf, sizeof(pBuf));
+	int a = 0;
 }
 
 
