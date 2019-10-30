@@ -54,8 +54,9 @@ size_t CSocketClient::Receive(char *pBuffer, size_t len)
 * @param	[in]	pBuffer		送信するデータ
 * @param	[in]	len			送信するデータのサイズ
 */
-void CSocketClient::Send(char * pBuffer, size_t len)
+void CSocketClient::Send(char *pBuffer, size_t len)
 {
+	send(m_Socket, pBuffer, len, 0);
 }
 
 

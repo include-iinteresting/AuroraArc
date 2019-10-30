@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="ddsfunctions.h" />
     <ClInclude Include="DirectSound.h" />
+    <ClInclude Include="GameDatabase.h" />
     <ClInclude Include="IGameScene.h" />
     <ClInclude Include="IOneshotSound.h" />
     <ClInclude Include="IStreamingSound.h" />
@@ -182,6 +183,7 @@
   <ItemGroup>
     <ClCompile Include="ddsfunctions.cpp" />
     <ClCompile Include="DirectSound.cpp" />
+    <ClCompile Include="GameDatabase.cpp" />
     <ClCompile Include="IGameScene.cpp" />
     <ClCompile Include="IOneshotSound.cpp" />
     <ClCompile Include="IStreamingSound.cpp" />
