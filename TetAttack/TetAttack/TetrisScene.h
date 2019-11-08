@@ -19,7 +19,8 @@ class CTetrisScene : public IGameScene
 {
 	friend class CPiece;
 public:
-	CTetrisScene(CSelector *pv);
+	CTetrisScene(CSelector *pv, ID2D1RenderTarget *pRenderTarget);
+	//CTetrisScene(ID2D1RenderTarget *pRenderTarget);
 	virtual ~CTetrisScene(void);
 	virtual GameSceneResultCode    move() override;
 	virtual void    draw(ID2D1RenderTarget *pRenderTarget) override;
@@ -29,6 +30,11 @@ public:
 	virtual void    copy(int col, int row, int size, int *block);
 	virtual void    scanField();
 	virtual void    deleteLine(int line);
+
+private:
+		ID2D1Bitmap *m_pBGImage;	//!	BGImage
+		void	InitTexture(ID2D1RenderTarget *pRenderTarget);
+
 protected:
 	CSelector * m_pSystem;
 	int         *m_iBlocks;

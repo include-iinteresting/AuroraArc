@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include <d2d1.h>
 #include "Selector.h"
 #include "TetrisScene.h"
@@ -43,7 +43,7 @@ void CPiece::setPiece(int type, int angle) {
 
 //  落下ピースを一段階落下
 BOOL CPiece::down() {
-	int    r = m_iRowY + 1;
+	int    r = m_iRowY +1;
 
 	//m_iRowY = r;
 

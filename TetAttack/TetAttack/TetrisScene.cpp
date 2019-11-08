@@ -1,16 +1,21 @@
-#include "StdAfx.h"
+//#include <otsuya.h>
+#include "stdafx.h"
 #include <d2d1.h>
 #include <tchar.h>
 #include <dwrite.h>
 #include "Selector.h"
 #include "TetrisScene.h"
 #include "Piece.h"
+#include "TextureLoader.h"
 
 //  Settings
 #define    OFFSET_X    0
 #define    OFFSET_Y    0
 #define    FIELD_WIDTH    480
 #define    FIELD_HEIGHT    480
+
+#define FRAME_TEXTURE_PATH _T("res/ronneku.jpg")
+
 
 static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(0.f,0.f,0.f),    //  0:black
@@ -23,23 +28,19 @@ static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(1.f,1.f,1.f),    //  7:white
 	D2D1::ColorF(.5f,.5f,.5f),    //  8:gray
 };
+//
+//CTetrisScene::CTetrisScene(ID2D1RenderTarget *pRenderTarget) {
+//	InitTexture(pRenderTarget);
+//}
 
 //  コンストラクタ
-CTetrisScene::CTetrisScene(CSelector *pv)
+CTetrisScene::CTetrisScene(CSelector *pv,ID2D1RenderTarget *pRenderTarget)
 {
+	InitTexture(pRenderTarget);
 	m_pSystem = pv;
 	m_iBlocks = NULL;
-	ID2D1RenderTarget *pRenderTarget = NULL;
-	pRenderTarget = pv->GetRenderTaget();
 	m_ppBrushes = new ID2D1SolidColorBrush*[kNumColors];
-	for (int i = 0; i < kNumColors; ++i) {
-		pRenderTarget->CreateSolidColorBrush(
-			colors[i],
-			&m_ppBrushes[i]
-		);
-	}
-	SAFE_RELEASE(pRenderTarget);
-
+	
 	m_pPiece = NULL;
 	m_iWait = 30;
 	m_iTime = 0;
@@ -54,11 +55,13 @@ CTetrisScene::~CTetrisScene(void)
 	//  後片付け
 	SAFE_DELETE(m_pPiece);
 
+	SAFE_RELEASE(m_pBGImage);
 	for (int i = 0; i < kNumColors; ++i) {
 		SAFE_RELEASE(m_ppBrushes[i]);
 	}
 	delete m_ppBrushes;
 	SAFE_DELETE(m_iBlocks);
+
 }
 
 //  盤面の初期化
@@ -133,7 +136,7 @@ BOOL    CTetrisScene::doPiece() {
 
 
 	//  キー操作でピースを動かす
-	if (GetAsyncKeyState(VK_RETURN)) {
+	if (GetAsyncKeyState(VK_RETURN)|| GetAsyncKeyState(VK_TAB)) {
 		if (!m_bEnter2)
 			m_pPiece->rotate();
 		m_bEnter2 = true;
@@ -213,15 +216,32 @@ void    CTetrisScene::draw(ID2D1RenderTarget *pRenderTarget) {
 	if (m_bGameOver) {
 		IDWriteTextFormat *pFormat = m_pSystem->GetSystemTextFormat();
 		rc.left = kOffsetX;
-		rc.top = kOffsetY;
+		rc.top = kOffsetY+300;
 		rc.right = rc.left + kFieldWidth;
-		rc.bottom = rc.top + kFieldHeight;
+		rc.bottom = rc.top + kFieldHeight+300;
 		DWRITE_TEXT_ALIGNMENT oldAlignment = pFormat->GetTextAlignment();
 		pFormat->SetTextAlignment(DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_CENTER);
 		pRenderTarget->DrawText(_T("GAME OVER"), 9, pFormat, &rc, m_ppBrushes[7]);
 		pFormat->SetTextAlignment(oldAlignment);
 		SAFE_RELEASE(pFormat);
 	}
+
+
+
+	//InitTexture(pRenderTarget);
+	//pRenderTarget = pv->GetRenderTaget();
+
+	ID2D1SolidColorBrush *pBrush = NULL;
+
+	D2D1_SIZE_F size = pRenderTarget->GetSize();
+	rc.left = 0.0f;
+	rc.top = 0.0f;
+	rc.right = size.width;
+	rc.bottom = size.height;
+
+	if (m_pBGImage)
+		pRenderTarget->DrawBitmap(m_pBGImage, rc, 1.0f, D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_LINEAR, NULL);
+
 
 }
 
@@ -234,13 +254,13 @@ BOOL CTetrisScene::collide(int col, int row, int size, int *block) {
 		c = col;
 		for (int j = 0; j < size; ++j) {
 			if (block[i*PIECE_SIZE + j]>0) {
-				if (r >= kRows)
+				if (r >= kRows)//床
 					return    false;
-				if (c < 0)
+				if (c < 0)//左壁
 					return    false;
-				if (c >= kCols)
+				if (c >= kCols)//右壁
 					return    false;
-				if (r >= 0 && m_iBlocks[r*kCols + c] > 0)
+				if (r >= 0 && m_iBlocks[r*kCols + c] > 0)//ブロック同士
 					return false;
 			}
 			c++;
@@ -303,4 +323,14 @@ void CTetrisScene::deleteLine(int line) {
 	for (c = 0; c < kCols; ++c) {
 		m_iBlocks[c] = 0;
 	}
+}
+
+
+/**
+* @brief	画像に関する初期化
+*/
+void CTetrisScene::InitTexture(ID2D1RenderTarget *pRenderTarget)
+{
+	m_pBGImage = NULL;
+	CTextureLoader::CreateD2D1BitmapFromFile(pRenderTarget, FRAME_TEXTURE_PATH, &m_pBGImage);
 }
