@@ -28,6 +28,7 @@ static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(1.f,1.f,1.f),    //  7:white
 	D2D1::ColorF(.5f,.5f,.5f),    //  8:gray
 };
+
 //
 //CTetrisScene::CTetrisScene(ID2D1RenderTarget *pRenderTarget) {
 //	InitTexture(pRenderTarget);
