@@ -33,6 +33,7 @@ static D2D1::ColorF    colors[] = {
 //	InitTexture(pRenderTarget);
 //}
 
+
 //  コンストラクタ
 CTetrisScene::CTetrisScene(CSelector *pv,ID2D1RenderTarget *pRenderTarget)
 {
