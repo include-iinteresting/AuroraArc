@@ -96,6 +96,9 @@
     <ClInclude Include="tgafunctions.h">
       <Filter>TextureLoader</Filter>
     </ClInclude>
+    <ClInclude Include="GameDatabase.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -160,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="tgafunctions.cpp">
       <Filter>TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

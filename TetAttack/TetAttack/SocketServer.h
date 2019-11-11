@@ -8,6 +8,8 @@ typedef struct PLAYERSSOCKET
 	SOCKET sock2;
 };
 
+#include <map>
+
 /**
 * @brief	ソケット通信（サーバー側）ゲーム側では動かさない
 */
