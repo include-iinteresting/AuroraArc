@@ -77,7 +77,7 @@ void CSelector::doAnim()
 			break;
 		
 		SAFE_DELETE(m_pScene);
-		m_pScene = new CTetrisScene(this, m_pRenderTarget);
+		m_pScene = new CTetrisScene(this);
 		m_eGamePhase = GAMEPHASE_GAME;
 	case    GAMEPHASE_GAME:
 		if (m_pScene != NULL) {

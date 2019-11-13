@@ -19,7 +19,7 @@ class CTetrisScene : public IGameScene
 {
 	friend class CPiece;
 public:
-	CTetrisScene(CSelector *pv, ID2D1RenderTarget *pRenderTarget);
+	CTetrisScene(CSelector *pv);
 	//CTetrisScene(ID2D1RenderTarget *pRenderTarget);
 	virtual ~CTetrisScene(void);
 	virtual GameSceneResultCode    move() override;
@@ -31,9 +31,9 @@ public:
 	virtual void    scanField();
 	virtual void    deleteLine(int line);
 
-private:
-		ID2D1Bitmap *m_pBGImage;	//!	BGImage
-		void	InitTexture(ID2D1RenderTarget *pRenderTarget);
+//private:
+//		ID2D1Bitmap *m_pBGImage;	//!	BGImage
+		//void	InitTexture(ID2D1RenderTarget *pRenderTarget);
 
 protected:
 	CSelector * m_pSystem;
@@ -60,6 +60,9 @@ protected:
 	BOOL    m_bDown2;   //  連射防止
 	int     m_iLeftWait;
 	int     m_iRightWait;
+
+	//スコア
+	int m_iScore;
 
 		
 	//  状態
