@@ -6,6 +6,7 @@
 #include "Selector.h"
 #include "TetrisScene.h"
 #include "Piece.h"
+#include <dinput.h>
 //#include "TextureLoader.h"
 
 
@@ -30,10 +31,10 @@ static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(.5f,.5f,.5f),    //  8:gray
 };
 
-//
-//CTetrisScene::CTetrisScene(ID2D1RenderTarget *pRenderTarget) {
-//	InitTexture(pRenderTarget);
-//}
+void CTetrisScene::setJoystic(DIJOYSTATE2 * js)//GameSceneで呼び出されてStageで実行される
+{
+	m_js = *js;
+}
 
 
 //  コンストラクタ
@@ -152,7 +153,7 @@ BOOL    CTetrisScene::doPiece() {
 
 
 	//  キー操作でピースを動かす
-	if (GetAsyncKeyState(VK_RETURN)|| GetAsyncKeyState(VK_TAB)) {
+	if (m_js.rgbButtons[2]||GetAsyncKeyState(VK_RETURN)|| GetAsyncKeyState(VK_TAB)) {
 		if (!m_bEnter2)
 			m_pPiece->rotate();
 		m_bEnter2 = true;

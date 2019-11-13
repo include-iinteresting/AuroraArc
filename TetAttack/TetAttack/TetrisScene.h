@@ -2,6 +2,7 @@
 #ifndef __IGAMESCENE_H__
 #include "IGameScene.h"
 #endif
+#include <dinput.h>
 
 enum TetrisPhase {
 	TETRISPHASE_INIT = 0,
@@ -30,6 +31,8 @@ public:
 	virtual void    copy(int col, int row, int size, int *block);
 	virtual void    scanField();
 	virtual void    deleteLine(int line);
+	
+	virtual void setJoystic(DIJOYSTATE2 *js);
 
 //private:
 //		ID2D1Bitmap *m_pBGImage;	//!	BGImage
@@ -46,6 +49,10 @@ protected:
 	CPiece  *m_pPiece;
 	int     m_iWait;
 
+
+	DIJOYSTATE2 m_js;
+
+	
 	static const int kCols = 8;//ピースのサイズ元は10
 	static const int kRows = 8;//ピースのサイず
 	static const int kNumColors = 9;
