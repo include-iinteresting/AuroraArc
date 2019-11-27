@@ -31,7 +31,7 @@ static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(.5f,.5f,.5f),    //  8:gray
 };
 
-void CTetrisScene::setJoystic(DIJOYSTATE2 * js)//GameSceneで呼び出されてStageで実行される
+void CTetrisScene::setJoystick(DIJOYSTATE2 * js)//GameSceneで呼び出されてStageで実行される
 {
 	m_js = *js;
 }
@@ -153,7 +153,7 @@ BOOL    CTetrisScene::doPiece() {
 
 
 	//  キー操作でピースを動かす
-	if (m_js.rgbButtons[2]||GetAsyncKeyState(VK_RETURN)|| GetAsyncKeyState(VK_TAB)) {
+	if (m_js.rgbButtons[4]||GetAsyncKeyState(VK_RETURN)|| GetAsyncKeyState(VK_TAB)) {
 		if (!m_bEnter2)
 			m_pPiece->rotate();
 		m_bEnter2 = true;

@@ -4,6 +4,9 @@
 ******************************************************/
 #pragma once
 
+#include <dinput.h>
+#include "IGameScene.h"
+
 enum GamePhase {
 	GAMEPHASE_INIT = 0,
 	GAMEPHASE_RESET = 0x010,
@@ -28,6 +31,7 @@ public:
 	CSelector(ID2D1RenderTarget *pRenderTarget);
 	virtual ~CSelector(void);
 	void    doAnim();
+	virtual void setJoystick(DIJOYSTATE2 *js);
 	void    doDraw(ID2D1RenderTarget *pRenderTarget);
 	ID2D1RenderTarget   *GetRenderTaget();
 	IDWriteTextFormat   *GetSystemTextFormat();

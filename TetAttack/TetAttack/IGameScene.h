@@ -3,6 +3,7 @@
 //
 #ifndef __IGAMESCENE_H__
 #define __IGAMESCENE_H__
+#include <dinput.h>
 
 //
 //  Scene ‚ÌI‚í‚è•û’è”
@@ -24,5 +25,7 @@ public:
 	virtual GameSceneResultCode    move() = 0;
 	virtual void    draw(ID2D1RenderTarget *pRenderTarget) = 0;
 	//virtual void    reset() = 0;
+	virtual void setJoystick(DIJOYSTATE2 *js);
+
 };
 #endif

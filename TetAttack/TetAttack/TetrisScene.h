@@ -32,7 +32,7 @@ public:
 	virtual void    scanField();
 	virtual void    deleteLine(int line);
 	
-	virtual void setJoystic(DIJOYSTATE2 *js);
+	virtual void setJoystick(DIJOYSTATE2 *js);
 
 //private:
 //		ID2D1Bitmap *m_pBGImage;	//!	BGImage

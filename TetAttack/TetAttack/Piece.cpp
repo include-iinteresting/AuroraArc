@@ -17,6 +17,16 @@ CPiece::~CPiece(void)
 
 }
 
+
+void CPiece::setJoystick(DIJOYSTATE2 * js)
+{
+
+	m_js = *js;
+
+
+}
+
+
 //  落下ピースをリセット
 void CPiece::resetPos() {
 	int    rnd = rand();

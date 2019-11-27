@@ -127,3 +127,10 @@ IDWriteTextFormat *CSelector::GetSystemTextFormat() {
 	m_pTextFormat->AddRef();
 	return m_pTextFormat;
 }
+
+
+
+void CSelector::setJoystick(DIJOYSTATE2 *js) {
+	m_pScene->setJoystick(js);
+
+}

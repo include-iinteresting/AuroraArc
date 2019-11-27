@@ -3,6 +3,7 @@
 #include <d2d1.h>
 #include "TextureLoader.h"
 
+#include <dinput.h>
 #define BG_TEXTURE_PATH _T("res/tetattack.png")
 
 #undef SAFE_RELEASE
@@ -18,6 +19,14 @@ CTitleScene::CTitleScene(ID2D1RenderTarget *pRenderTarget)
 
 	m_ePhase = TitlePhase::TITLEPHASE_INIT;
 	
+}
+
+
+
+void CTitleScene::setJoystick(DIJOYSTATE2 * js)//GameSceneÇ≈åƒÇ—èoÇ≥ÇÍÇƒStageÇ≈é¿çsÇ≥ÇÍÇÈ
+{
+
+	m_js = *js;
 }
 
 
@@ -43,6 +52,30 @@ GameSceneResultCode CTitleScene::move()
 		m_ePhase = TitlePhase::TITLEPHASE_RUN;
 		break;
 	case TITLEPHASE_RUN:
+		if (m_js.rgbButtons[0])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[1])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[2])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[3])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[4])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[5])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[6])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[7])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[8])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[9])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+		if (m_js.rgbButtons[10])
+			m_ePhase = TitlePhase::TITLEPHASE_DONE;
+
+
 		if (GetAsyncKeyState(VK_SPACE))
 			m_ePhase = TitlePhase::TITLEPHASE_DONE;
 		break;
@@ -82,3 +115,5 @@ void CTitleScene::InitTexture(ID2D1RenderTarget *pRenderTarget)
 	m_pBGImage = NULL;
 	CTextureLoader::CreateD2D1BitmapFromFile(pRenderTarget, BG_TEXTURE_PATH, &m_pBGImage);
 }
+
+

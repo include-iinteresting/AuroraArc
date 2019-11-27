@@ -10,3 +10,8 @@ IGameScene::~IGameScene()
 {
 }
 
+
+void IGameScene::setJoystick(DIJOYSTATE2 * js)//GameScene‚ÅŒÄ‚Ño‚³‚ê‚ÄStage‚ÅÀs‚³‚ê‚é
+{
+
+}
