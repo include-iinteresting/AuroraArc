@@ -98,7 +98,7 @@ void CPiece::draw(ID2D1RenderTarget *pRenderTarget) {
 					int    bk = m_iBlocks[i*PIECE_SIZE + j];
 					if (bk > 0 && bk < CTetrisScene::kSentinelID) {
 						bk = (bk % (CTetrisScene::kNumColors - 1)) + 1;
-						pRenderTarget->FillRectangle(&rc, m_pScene->m_ppBrushes[bk]);
+						pRenderTarget->FillRectangle(&rc, m_pScene->m_ppBrushes[bk]);//‚±‚±‚ÅŒvŽZ‚µ‚Ä‚¢‚é‚©‚à‚µ‚ê‚È‚¢
 					}
 				}
 			}

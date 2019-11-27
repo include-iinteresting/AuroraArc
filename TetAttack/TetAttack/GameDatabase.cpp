@@ -50,6 +50,14 @@ private:
 };
 
 
+
+void CGameDatabase::setJoystick(DIJOYSTATE2 * js)//GameScene‚ÅŒÄ‚Ño‚³‚ê‚ÄStage‚ÅÀs‚³‚ê‚é
+{
+	m_js = *js;
+}
+
+
+
 CGameDatabaseImpl	*CGameDatabaseImpl::m_pInstance = NULL;
 
 

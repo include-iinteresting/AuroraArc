@@ -25,7 +25,7 @@ static D2D1::ColorF    colors[] = {
 	D2D1::ColorF(0.f,1.f,0.f),    //  2:green
 	D2D1::ColorF(0.f,1.f,1.f),    //  3:cyan
 	D2D1::ColorF(1.f,0.f,0.f),    //  4:red
-	D2D1::ColorF(1.f,1.f,0.f),    //  5:magenta
+	D2D1::ColorF(1.f,0.f,1.f),    //  5:magenta
 	D2D1::ColorF(1.f,1.f,0.f),    //  6:yellow
 	D2D1::ColorF(1.f,1.f,1.f),    //  7:white
 	D2D1::ColorF(.5f,.5f,.5f),    //  8:gray
